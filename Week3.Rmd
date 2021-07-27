@@ -1,0 +1,25 @@
+---
+title: "Air Miles in USA"
+author: "Juan Manuel Noval"
+date: "July 24th, 2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Description
+
+The following chart will show the revenue passenger miles flown by commercial airlines in the United States for each year from 1937 to 1960.
+
+
+## Air Miles Plot
+
+```{r message=FALSE, warning=FALSE}
+data("airmiles")
+library(ggplot2)
+library(plotly)
+plot_ly(x=time(airmiles), y=airmiles, type="bar")
+```
+
